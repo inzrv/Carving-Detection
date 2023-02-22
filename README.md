@@ -52,11 +52,14 @@ Jupyter-ноутбук с пошаговым описанием алгоритм
     <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_5.png" width="200" />
     <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_6.png" width="200" /> 
   </p>
-
-    6. Осталось только найти значения координаты $y$ самой верхней и самой нижней точки из $\mathcal{S}$ и перевести их в координаты модели. Получаем, что резьба ограничена плоскостями $y = -0,598$ и $y = 1,088$. 
-    <p float="left">
-    <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_7.png" width="200" />
-    <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_8.png" width="200" /> 
+  
+  6. Осталось только найти значения координаты $y$ самой верхней и самой нижней точки из $\mathcal{S}$ и перевести их в координаты модели. Получаем, что резьба ограничена плоскостями $y = -0,598$ и $y = 1,088$.
+  
+  Истинные значения можно узнать, импортировав модель, например, в Blender: $y = -0,59819$ и $y = 1,0869$. Для улучшения точности можно увеличить значение  параметра `scale` или добавить функцию, которая будет искать на модели точки, близкие к найденным плоскостям, и выдавать их в качестве ответа.
+  
+  <p float="left">
+  <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_7.png" width="400" /> 
+  <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_8.png" width="400" /> 
   </p>
     
     
