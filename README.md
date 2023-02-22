@@ -15,13 +15,13 @@ Jupyter-ноутбук с пошаговым описанием алгоритм
 1. Для кажого полигона $p_i$ сетки $M$ задан вектор нормали $\vec{n}_i$ (голубые на рисунке ниже). Первым шагом алгоритм вычисляет углы $\alpha_j$ между векторами $\vec{n}_i$ и вектором $(0,1,0)$, сонаправленным с осью вращения.
 
 <p align="left">
-  <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_1.png" width="400" title="pic_1">
+  <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_1.png" width="400">
 </p>
 
 2. Далее все полигоны с одинаковыми углами $\alpha_j$ объединяются в наборы $P_{\alpha_j}$. Это делается из предположения о том, что полигоны на витке резьбы окажутся в одном множестве $P_{\alpha_j}$. На рисунке ниже полигоны из множеств $P_{\alpha_j}$ покрашены одним цветом.
 
 <p align="left">
-  <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_2.png" width="200" title="pic_2">
+  <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_2.png" width="200">
 </p>
 
 3. Теперь мы должны объединить полигоны из наборов $P_{\alpha_j}$ в компоненты связности $\mathcal{C}^i_{\alpha_j}$. Сделать это можно двумя способами 
@@ -46,10 +46,18 @@ Jupyter-ноутбук с пошаговым описанием алгоритм
   4. Для ускорения работы алгоритма можно убрать из рассмотрения маски с небольшим количеством компонент связности. После этого на каждой маске необходимо найти похожие компоненты связности. Если среди компонент связности маски $m_{\alpha_j}$ много похожих на компоненту $\mathcal{C}^i_{\alpha_j} \subset m_{\alpha_j}$, то скорее всего она соответствуют участку резьбы (рисунок сверху как раз соответствует такой ситуации).
   
   5. После того как на каждой маске $m_{\alpha_j}$ выделены компоненты связности $\{ \mathcal{C}^i_{\alpha_j}\}$, соответствующие участку резьбы, их можно объединить в одно множество $\mathcal{S}$, покрывающее весь участок резьбы:
-  $\mathcal{S} = \bigcup\limits_{i,j} \mathcal{C}^i_{\alpha_j}$ (см. рисунок ниже).
-    
-    
-    
+  $\mathcal{S} = \bigcup\limits_{i,j} \mathcal{C}^i_{\alpha_j}$ (см. левый рисунок ниже). 
+  
+  <p float="left">
+    <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_5.png" width="200" />
+    <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_6.png" width="200" /> 
+  </p>
+
+    6. Осталось только найти значения координаты $y$ самой верхней и самой нижней точки из $\mathcal{S}$ и перевести их в координаты модели. Получаем, что резьба ограничена плоскостями $y = -0,598$ и $y = 1,088$. 
+    <p float="left">
+    <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_7.png" width="200" />
+    <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_8.png" width="200" /> 
+  </p>
     
     
     
