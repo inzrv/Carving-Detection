@@ -89,7 +89,7 @@ Jupyter-ноутбук с пошаговым описанием алгоритм
   <img src="https://github.com/inzrv/open-code-test-2/blob/main/pics/pic_9.png" width="200" /> 
  </p>
     
-  Теперь если размер множества $\set{\mathcal{C}_{\alpha_j}^i ~ | ~ i \in I}$
+  Теперь если размер множества $\set{\mathcal{C}^i_{\alpha_j} ~ | ~ i \in I}$ достаточно большой, то мы имеем $|\set{\mathcal{C}_{\alpha_j}^i ~ | ~ i \in I}|$ компонент связности, которые скорее всего являются частью резьбы.
     
     
     
